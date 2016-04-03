@@ -26,36 +26,36 @@ Watched vars can be objects or primitives.
 ## Methods
 
     Observable(object, eventDispacther)
-    *As mentioned above, eventDispacther must be an instance of a event dispatcher
-    implementation providinga least a emit method to emit events when a watched
-    variable is subject to change*
+*As mentioned above, eventDispacther must be an instance of a event dispatcher
+implementation providinga least a emit method to emit events when a watched
+variable is subject to change*
 
     set(prop, value)
-    *Affects the given value to the given property contained in the Observable instance*
+*Affects the given value to the given property contained in the Observable instance*
 
     on(event, callback)
-    *Binds a listener to the given event*
+*Binds a listener to the given event*
 
     get(prop)
-    *Returns the value of the given property in the watched object, if the initial
+*Returns the value of the given property in the watched object, if the initial
     variable is not an object then the only possible value will be returned, the
-    value of the watched variable*
+value of the watched variable*
 
     originalProps()
-    *Observable affects the properties of the watched object to it's own instance,
-    thus to avoid overwritting it's own properties by accident, it prefixes
-    every property name of the watched object by the following: "_Observed_".
+*Observable affects the properties of the watched object to it's own instance,
+thus to avoid overwritting it's own properties by accident, it prefixes
+every property name of the watched object by the following: "_Observed_".
 
-    Hence you can't just pass you monitored object as an argument to a function
-    which will try to access it's properties by their original keys and except
-    it to work.
+Hence you can't just pass you monitored object as an argument to a function
+which will try to access it's properties by their original keys and except
+it to work.
 
-    You first need to retrieve the original object by calling the originalProps()
-    method, which will return an object with the same structure as the original,
-    but not the same values is they changed in the meantime.*
+You first need to retrieve the original object by calling the originalProps()
+method, which will return an object with the same structure as the original,
+but not the same values is they changed in the meantime.*
 
 ## Events
 
     value-changed
-    *Emitted when a property of a monitored object, or the value of the watched variable
-    changed*
+*Emitted when a property of a monitored object, or the value of the watched variable
+changed*
