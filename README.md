@@ -5,7 +5,7 @@ Watched vars can be objects or primitives.
 ## Usage
 
     var fooBar = {foo: 'bar'};
-    //fooBar originale object will be replaced by the instance of Observable
+    //fooBar original object will be replaced by the instance of Observable
     //wrapping object properties, thus allowing us to listen for changes
     //on it's properties
 
